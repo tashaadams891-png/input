@@ -4,59 +4,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Form</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<title id="pageTitle">Shipping Co. | User Information</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Shipping icon -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+```
+
 </head>
 
 <body>
 
 ```
-<div class="container">
-    <h1>User Information</h1>
+<header class="navbar">
 
-    <form action="/submit" method="POST">
+    <div class="brand">
+        <div class="brand-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+        </div>
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required
-        >
+        <div class="brand-text">
+            <span>SHIPPING</span>
+            <strong>CO.</strong>
+        </div>
+    </div>
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-        >
+    <div class="secure">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Secure Information</span>
+    </div>
 
-        <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required
-        >
+</header>
 
-        <input
-            type="text"
-            name="address"
-            placeholder="Residential Address"
-            required
-        >
 
-        <input
-            type="text"
-            name="airport"
-            placeholder="Nearest Airport"
-            required
-        >
+<main class="page">
 
-     
+    <section class="hero">
 
-        <button type="submit">Submit</button>
+        <div class="hero-content">
 
-    </form>
-</div>
+            <span class="eyebrow">
+                <i class="fa-solid fa-box"></i>
+                SHIPPING INFORMATION
+            </span>
+
+            <h1 id="heading">
+                Tell us about yourself
+            </h1>
+
+            <p class="intro">
+                Please provide your information below so we can process
+                your shipping request efficiently.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="form-section">
+
+        <div class="form-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Personal Information</h2>
+                    <p>Enter your details below</p>
+                </div>
+
+                <div class="step">
+                    <span>01</span>
+                    <small>DETAILS</small>
+                </div>
+            </div>
+
+
+            <form action="/submit" method="POST">
+
+                <div class="form-grid">
+
+                    <div class="input-group full">
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="you@example.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="Enter phone number"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group full">
+                        <label for="address">
+                            Residential Address
+                        </label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                name="address"
+                                id="address"
+                                placeholder="Enter your residential address"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group full">
+                        <label for="airport">
+                            Nearest Airport
+                        </label>
+
+                        <div class="input-box">
+                            <i class="fa-solid fa-plane-departure"></i>
+
+                            <input
+                                type="text"
+                                name="airport"
+                                id="airport"
+                                placeholder="Enter nearest airport"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="privacy-note">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <span>
+                        Your information is transmitted securely and
+                        used only for processing your request.
+                    </span>
+                </div>
+
+
+                <button type="submit" id="submitButton">
+                    <span>Submit Information</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-brand">
+        <i class="fa-solid fa-truck-fast"></i>
+        <span>SHIPPING CO.</span>
+    </div>
+
+    <p>Professional shipping and logistics services</p>
+</footer>
+
+
+<script>
+
+    const translations = {
+
+        en: {
+            title: "Shipping Co. | User Information",
+            heading: "Tell us about yourself",
+            name: "Full Name",
+            email: "Email Address",
+            phone: "Phone Number",
+            address: "Residential Address",
+            airport: "Nearest Airport",
+            submit: "Submit Information"
+        },
+
+        fr: {
+            title: "Shipping Co. | Informations utilisateur",
+            heading: "Parlez-nous de vous",
+            name: "Nom complet",
+            email: "Adresse e-mail",
+            phone: "Numéro de téléphone",
+            address: "Adresse résidentielle",
+            airport: "Aéroport le plus proche",
+            submit: "Envoyer les informations"
+        },
+
+        es: {
+            title: "Shipping Co. | Información del usuario",
+            heading: "Cuéntenos sobre usted",
+            name: "Nombre completo",
+            email: "Correo electrónico",
+            phone: "Número de teléfono",
+            address: "Dirección residencial",
+            airport: "Aeropuerto más cercano",
+            submit: "Enviar información"
+        },
+
+        de: {
+            title: "Shipping Co. | Benutzerinformationen",
+            heading: "Erzählen Sie uns von sich",
+            name: "Vollständiger Name",
+            email: "E-Mail-Adresse",
+            phone: "Telefonnummer",
+            address: "Wohnadresse",
+            airport: "Nächstgelegener Flughafen",
+            submit: "Informationen senden"
+        },
+
+        it: {
+            title: "Shipping Co. | Informazioni utente",
+            heading: "Parlaci di te",
+            name: "Nome completo",
+            email: "Indirizzo e-mail",
+            phone: "Numero di telefono",
+            address: "Indirizzo di residenza",
+            airport: "Aeroporto più vicino",
+            submit: "Invia informazioni"
+        },
+
+        pt: {
+            title: "Shipping Co. | Informações do usuário",
+            heading: "Conte-nos sobre você",
+            name: "Nome completo",
+            email: "E-mail",
+            phone: "Número de telefone",
+            address: "Endereço residencial",
+            airport: "Aeroporto mais próximo",
+            submit: "Enviar informações"
+        },
+
+        pl: {
+            title: "Shipping Co. | Informacje o użytkowniku",
+            heading: "Opowiedz nam o sobie",
+            name: "Imię i nazwisko",
+            email: "Adres e-mail",
+            phone: "Numer telefonu",
+            address: "Adres zamieszkania",
+            airport: "Najbliższe lotnisko",
+            submit: "Wyślij informacje"
+        }
+    };
+
+
+    function translatePage() {
+
+        const browserLanguage =
+            navigator.language.toLowerCase().split("-")[0];
+
+        const language =
+            translations[browserLanguage]
+            ? browserLanguage
+            : "en";
+
+        const t = translations[language];
+
+        document.documentElement.lang = language;
+
+        document.getElementById("pageTitle").textContent = t.title;
+        document.getElementById("heading").textContent = t.heading;
+
+        document.getElementById("name").placeholder = t.name;
+        document.getElementById("email").placeholder = t.email;
+        document.getElementById("phone").placeholder = t.phone;
+        document.getElementById("address").placeholder = t.address;
+        document.getElementById("airport").placeholder = t.airport;
+
+        document.getElementById("submitButton")
+            .querySelector("span").textContent = t.submit;
+    }
+
+    translatePage();
+
+</script>
 ```
 
 </body>
